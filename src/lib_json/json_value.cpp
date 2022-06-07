@@ -667,6 +667,8 @@ Value::Int Value::asInt() const {
     return 0;
   case booleanValue:
     return value_.bool_ ? 1 : 0;
+  case stringValue:
+    return atoi(asString().c_str());
   default:
     break;
   }
@@ -689,6 +691,8 @@ Value::UInt Value::asUInt() const {
     return 0;
   case booleanValue:
     return value_.bool_ ? 1 : 0;
+  case stringValue:
+    return UInt(atoi(asString().c_str()));
   default:
     break;
   }
@@ -816,6 +820,8 @@ bool Value::asBool() const {
     const auto value_classification = std::fpclassify(value_.real_);
     return value_classification != FP_ZERO && value_classification != FP_NAN;
   }
+  case stringValue:
+    return atoi(asString().c_str()) ? true : false;
   default:
     break;
   }

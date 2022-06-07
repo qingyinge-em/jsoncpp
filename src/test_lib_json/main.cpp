@@ -1755,11 +1755,11 @@ JSONTEST_FIXTURE_LOCAL(ValueTest, typeChecksThrowExceptions) {
   JSONTEST_ASSERT_THROWS(objVal.asString());
   JSONTEST_ASSERT_THROWS(arrVal.asString());
 
-  JSONTEST_ASSERT_THROWS(strVal.asInt());
+  // JSONTEST_ASSERT_THROWS(strVal.asInt());
   JSONTEST_ASSERT_THROWS(objVal.asInt());
   JSONTEST_ASSERT_THROWS(arrVal.asInt());
 
-  JSONTEST_ASSERT_THROWS(strVal.asUInt());
+  // JSONTEST_ASSERT_THROWS(strVal.asUInt());
   JSONTEST_ASSERT_THROWS(objVal.asUInt());
   JSONTEST_ASSERT_THROWS(arrVal.asUInt());
 
@@ -1779,7 +1779,7 @@ JSONTEST_FIXTURE_LOCAL(ValueTest, typeChecksThrowExceptions) {
   JSONTEST_ASSERT_THROWS(objVal.asFloat());
   JSONTEST_ASSERT_THROWS(arrVal.asFloat());
 
-  JSONTEST_ASSERT_THROWS(strVal.asBool());
+  // JSONTEST_ASSERT_THROWS(strVal.asBool());
   JSONTEST_ASSERT_THROWS(objVal.asBool());
   JSONTEST_ASSERT_THROWS(arrVal.asBool());
 
